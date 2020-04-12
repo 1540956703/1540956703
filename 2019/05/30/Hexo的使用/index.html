@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Chuang Li">
+    
+    <meta name="description" content="死肥宅万岁！！！">
+    
+    
+    
+    
+    
+    
+    <title>Hexo的使用 | 游戏小哈的学习历程</title>
+    <link href="”http://luotianyi.qicp.vip“" rel="”prefetch”">
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/aos.js"></script>
+    <script src="/js/highslide/highslide-full.min.js"></script>
+    <link rel="stylesheet" href="/js/highslide/highslide.css">
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/https://blogdata-1256223694.cos.ap-chengdu.myqcloud.com/sjbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/https:/blogdata-1256223694.cos.ap-chengdu.myqcloud.com/touxiang.jpg'
+        var previews = 'https://blogdata-1256223694.cos.ap-chengdu.myqcloud.com/preview/preview1.jpg,https://blogdata-1256223694.cos.ap-chengdu.myqcloud.com/preview/preview2.jpg,https://blogdata-1256223694.cos.ap-chengdu.myqcloud.com/preview/preview3.jpg,https://blogdata-1256223694.cos.ap-chengdu.myqcloud.com/preview/preview4.jpg,https://blogdata-1256223694.cos.ap-chengdu.myqcloud.com/preview/preview5.jpg,https://blogdata-1256223694.cos.ap-chengdu.myqcloud.com/preview/preview7.jpg,https://blogdata-1256223694.cos.ap-chengdu.myqcloud.com/preview/preview8.jpg,https://blogdata-1256223694.cos.ap-chengdu.myqcloud.com/preview/preview9.jpg,https://blogdata-1256223694.cos.ap-chengdu.myqcloud.com/preview/preview6.jpg,https://blogdata-1256223694.cos.ap-chengdu.myqcloud.com/preview/preview10.jpg,https://blogdata-1256223694.cos.ap-chengdu.myqcloud.com/preview/preview11.jpg,https://blogdata-1256223694.cos.ap-chengdu.myqcloud.com/preview/preview12.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+</head></html>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://luotianyi.qicp.vip" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-navbar-collapse" aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://luotianyi.qicp.vip">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">游戏小哈的学习历程</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class>
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class>
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/categories/Hexo/">Hexo</a>
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                <li class>
+                    <a href="/games">
+                        <i class="fa fa-gamepad"></i>小游戏
+                    </a>
+                </li>
+                
+                
+                
+                <li class>
+                    <a href="/tools">
+                        <i class="fa fa-wrench"></i>工具
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/Hexo/">Hexo</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/OpenGL/">OpenGL</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/Unity/">Unity</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/tags">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                <li class>
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://luotianyi.qicp.vip">游戏小哈的学习历程</a>
+        >
+        <span>Hexo的使用</span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2019/05/30/Hexo的使用/">Hexo的使用</a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/Hexo/">Hexo</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2019-05-30
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2019/05/30/Hexo的使用/">Hexo的使用</a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2019-05-30
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/Hexo/">Hexo</a>
+                
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h1>关于Hexo的主题下载:</h1>
+
+<p>下载地址: <a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></p>
+
+<p>一般下载的地址为github，下面有主题需要的配置步骤。</p>
+
+<h1>Hexo中常用的命令:</h1>
+
+<p>其中命令可以连用，例如:hexo d -g 生成加部署</p>
+
+<h2>简写</h2>
+
+<blockquote><p>hexo n &quot;我的博客&quot; == hexo new &quot;我的博客&quot; #新建文章<br>hexo p == hexo publish<br>hexo g == hexo generate#生成<br>hexo s == hexo server #启动服务预览<br>hexo d == hexo deploy#部署</p></blockquote>
+
+<h2>服务器</h2>
+
+<blockquote><p>hexo server #Hexo 会监视文件变动并自动更新，您无须重启服务器。<br>hexo server -s #静态模式<br>hexo server -p 5000 #更改端口<br>hexo server -i 192.168.1.1 #自定义 IP<br>hexo clean #清除缓存 网页正常情况下可以忽略此条命令<br>hexo g #生成静态网页<br>hexo d #开始部署</p></blockquote>
+
+<h2>监视文件变动</h2>
+
+<blockquote><p>hexo generate #使用 Hexo 生成静态文件快速而且简单<br>hexo generate –watch #监视文件变动</p></blockquote>
+
+<h2>完成后部署</h2>
+
+<blockquote><p>hexo generate –deploy<br>hexo deploy –generate<br>可以直接使用 hexo d -g</p></blockquote>
+
+<h2>草稿</h2>
+
+<blockquote><p>hexo publish [layout] &lt;title&gt;</p></blockquote>
+
+<h2>模版</h2>
+
+<blockquote><p>hexo new &quot;postName&quot; #新建文章<br>hexo new page &quot;pageName&quot; #新建页面<br>hexo generate #生成静态页面至public目录<br>hexo server #开启预览访问端口（默认端口4000，&#39;ctrl + c&#39;关闭server）<br>hexo deploy #将.deploy目录部署到GitHub</p><p>hexo new [layout] &lt;title&gt;<br>hexo new photo &quot;My Gallery&quot;<br>hexo new &quot;Hello World&quot; –lang tw</p></blockquote>
+
+<p><img alt="TABLE-1_1" src="/2019/05/30/Hexo的使用/1_1.png"></p>
+
+<blockquote><p>title: 使用Hexo搭建个人博客<br>layout: post<br>date: 2014-03-03 19:07:43<br>comments: true<br>categories: Blog<br>tags: [Hexo]<br>keywords: Hexo, Blog<br>description: 生命在于折腾，又把博客折腾到Hexo了。给Hexo点赞。</p></blockquote>
+
+<h2>模版（Scaffold）</h2>
+
+<p>hexo new photo &quot;My Gallery&quot;</p>
+
+<p><img alt="TABLE-1_2" src="/2019/05/30/Hexo的使用/1_2.png"></p>
+
+<h2>设置文章摘要</h2>
+
+<blockquote><p>以上是文章摘要 &lt;!–more–&gt; 以下是余下全文 </p></blockquote>
+
+<h2>写作</h2>
+
+<blockquote><p>hexo new page &lt;title&gt;<br>hexo new post &lt;title&gt;</p></blockquote>
+
+<p><img alt="TABLE-1_3" src="/2019/05/30/Hexo的使用/1_3.png"></p>
+
+<h2>推送到服务器上</h2>
+
+<blockquote><p>hexo n #写文章<br>hexo g #生成<br>hexo d #部署 #可与hexo g合并为 hexo d -g</p></blockquote>
+
+<h2>报错</h2>
+
+<blockquote><p>ERROR Deployer not found: git</p></blockquote>
+
+<h2>解决方法</h2>
+
+<blockquote><p>npm install hexo-deployer-git –save</p></blockquote>
+
+<h1>部署类型设置git</h1>
+
+<blockquote><p>hexo 3.0 部署类型不再是github，_config.yml 中修改</p><h1>Deployment</h1><p>Docs: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="noopener">http://hexo.io/docs/deployment.html</a><br>deploy:<br>  type: git<br>  repository: git@<strong>*.github.com:</strong><em>/**</em>.github.io.git<br>  branch: master</p></blockquote>
+
+<h2>xcodebuild</h2>
+
+<blockquote><p>xcode-select: error: tool &#39;xcodebuild&#39; requires Xcode, but active developer directory &#39;/Library/Developer/CommandLineTools&#39; is a command line tools instance</p><p>npm install bcrypt</p></blockquote>
+
+<h2>RSS不显示</h2>
+
+<blockquote><p>安装RSS插件<br>npm install hexo-generator-feed –save<br>开启RSS功能<br>编辑hexo/_config.yml，添加如下代码：<br>rss: /atom.xml #rss地址  默认即可</p></blockquote>
+
+<h2>开启评论</h2>
+
+<blockquote><p>1.我使用多说代替自带的评论，在多说 网站注册 &gt; 后台管理 &gt; 添加新站点 &gt; 工具 === 复制通用代码 里面有 short<em>name<br>在根目录 </em>config.yml 添加一行 disqus_shortname: jslite 是在多说注册时产生的<br>复制到 themes\landscape\layout_partial\article.ejs<br>把<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> (!index &amp;&amp; post.comments &amp;&amp; config.disqus_shortname)&#123; %&gt;</span><br><span class="line">&lt;section id=<span class="string">"comments"</span>&gt;</span><br><span class="line">&lt;div id=<span class="string">"disqus_thread"</span>&gt;</span><br><span class="line">  &lt;noscript&gt;Please enable JavaScript to view the &lt;a href=<span class="string">"//disqus.com/?ref_noscript"</span>&gt;comments powered by Disqus.&lt;<span class="regexp">/a&gt;&lt;/</span>noscript&gt;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>section&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure><br><br>改成</p></blockquote>
+
+
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> (!index &amp;&amp; post.comments &amp;&amp; config.disqus_shortname)&#123; %&gt;</span><br><span class="line">  &lt;section id=<span class="string">"comments"</span>&gt;</span><br><span class="line">    &lt;!-- 多说评论框 start --&gt;</span><br><span class="line">    &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"ds-thread"</span> data-thread-key=<span class="string">"&lt;%= post.layout %&gt;-&lt;%= post.slug %&gt;"</span> data-title=<span class="string">"&lt;%= post.title %&gt;"</span> data-url=<span class="string">"&lt;%= page.permalink %&gt;"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;!-- 多说评论框 end --&gt;</span><br><span class="line">    &lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt;</span><br><span class="line">    &lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    <span class="keyword">var</span> duoshuoQuery = &#123;<span class="attr">short_name</span>:<span class="string">'&lt;%= config.disqus_shortname %&gt;'</span>&#125;;</span><br><span class="line">      (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> ds = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</span><br><span class="line">        ds.type = <span class="string">'text/javascript'</span>;ds.async = <span class="literal">true</span>;</span><br><span class="line">        ds.src = (<span class="built_in">document</span>.location.protocol == <span class="string">'https:'</span> ? <span class="string">'https:'</span> : <span class="string">'http:'</span>) + <span class="string">'//static.duoshuo.com/embed.js'</span>;</span><br><span class="line">        ds.charset = <span class="string">'UTF-8'</span>;</span><br><span class="line">        (<span class="built_in">document</span>.getElementsByTagName(<span class="string">'head'</span>)[<span class="number">0</span>] </span><br><span class="line">         || <span class="built_in">document</span>.getElementsByTagName(<span class="string">'body'</span>)[<span class="number">0</span>]).appendChild(ds);</span><br><span class="line">      &#125;)();</span><br><span class="line">      &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">    &lt;!-- 多说公共JS代码 end --&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>section&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+<h1>Hexo文章的写法</h1>
+
+<blockquote><p>Hexo文章支持html和MarkDown语法，你不但可以单独使用这两个语法也可以混合使用。</p></blockquote>
+
+<h2>关于MarkDown语法规则</h2>
+
+<blockquote><p>链接: <a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="noopener">https://www.zybuluo.com/mdeditor</a></p></blockquote>
+
+    </div>
+</article>
+
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get" action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            Chuang Li
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="https://blogdata-1256223694.cos.ap-chengdu.myqcloud.com/touxiang.jpg" width="140" height="140" alt="个人头像" class="author-image">
+            <p class="author-description"></p><p>死肥宅万岁！！！</p>
+<p></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/05/30/关于Unity的销毁方法/">关于Unity物体的销毁方法</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/05/30/软件设计模式的规则/">软件设计模式的规则</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/05/30/OpenGL环境配置/">OpenGL环境配置</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/05/30/Hexo的使用/">Hexo的使用</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/05/29/如何使用Hexo搭建博客网站/">如何使用Hexo搭建博客网站(转)</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/05/30/Hexo的使用/">Hexo的使用</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/05/30/OpenGL环境配置/">OpenGL环境配置</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/05/30/关于Unity的销毁方法/">关于Unity物体的销毁方法</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/05/29/如何使用Hexo搭建博客网站/">如何使用Hexo搭建博客网站(转)</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/05/30/软件设计模式的规则/">软件设计模式的规则</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2019/05/30/Hexo的使用/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2019/05/30/Hexo的使用/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2019/05/30/Hexo的使用/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/tags/Hexo/" style="font-size: 17.179085325416168px;" class="tag-cloud-link">Hexo</a>
+    
+    <a href="/tags/OpenGL/" style="font-size: 19.144073412001077px;" class="tag-cloud-link">OpenGL</a>
+    
+    <a href="/tags/Unity/" style="font-size: 12.833888941097348px;" class="tag-cloud-link">Unity</a>
+    
+    <a href="/tags/设计模式/" style="font-size: 17.69596281170311px;" class="tag-cloud-link">设计模式</a>
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://learnopengl-cn.github.io/" target="_blank">OpenGL中文教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.icourse163.org/" target="_blank">慕课Mooc</a>
+    </li>
+    
+    <li>
+        <a href="http://nyoj.top/problemset" target="_blank">南阳理工ACM练习区</a>
+    </li>
+    
+    <li>
+        <a href="https://tinypng.com/" target="_blank">图片在线压缩</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://www.cnblogs.com/lichuangblog/" target="_blank">博客园</a>
+    </li>
+    
+    <li>
+        <a href="https://blog.csdn.net/" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://github.com/1540956703" target="_blank">GitHub</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 Chuang Li Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+<script src="/js/activate-power-mode.js"></script>
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: 'https://blogdata-1256223694.cos.ap-chengdu.myqcloud.com/background/',
+      ext: 'jpg',
+      maxCount: '9'
+    }
+</script>
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+<script src="/js/oni.js"></script>
+
+
+
+</html>
